@@ -1,0 +1,4 @@
+# -*- ruby -*-
+cookbook "bricks" do
+  configuration "default"
+end
