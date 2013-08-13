@@ -76,19 +76,6 @@ execute "move bricks source" do
   command "mv bricks/* " + node["bricks"]["path"]
 end
 
-# Apache2 configuration
-apache_site "default" do
-  enable false
-end
-
-web_app "bricks" do
-  cookbook "bricks"
-  enable true
-  docroot node["bricks"]["path"]
-  server_name node["bricks"]["server_name"]
-  server_aliases node["bricks"]["server_aliases"]
-end
-
 template node['bricks']['path'] + '/LocalSettings.php' do
   source 'LocalSettings.php.erb'
   mode 0644
@@ -101,6 +88,36 @@ template node['bricks']['path'] + '/LocalSettings.php' do
             :dbpass => node["bricks"]["db"]["password"],
             :host => 'localhost',
             :showhint => false)
+end
+
+#Fix unix path for Raidak and older bricks's codenames
+case node["bricks"]["codename"]
+when "raidak","lachen","punpun","torsa","feni","betwa","narmada"
+  cookbook_file "/tmp/fix_unix_path.sh" do
+    source "fix_unix_path.sh"
+    cookbook "bricks"
+  end
+
+  execute "chmod script" do
+    command "chmod u+x /tmp/fix_unix_path.sh"
+  end
+
+  execute "fix unix path" do
+    command "/tmp/fix_unix_path.sh " + node["bricks"]["path"]
+  end
+end
+
+# Apache2 configuration
+apache_site "default" do
+  enable false
+end
+
+web_app "bricks" do
+  cookbook "bricks"
+  enable true
+  docroot node["bricks"]["path"]
+  server_name node["bricks"]["server_name"]
+  server_aliases node["bricks"]["server_aliases"]
 end
 
 # MySQL configuration
