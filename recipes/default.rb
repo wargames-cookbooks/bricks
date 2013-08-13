@@ -139,3 +139,10 @@ mysql_database_user node["bricks"]["db"]["username"] do
   privileges [:select,:update,:insert,:create,:delete,:drop]
   action :grant
 end
+
+mysql_database "Setup database" do
+  connection mysql_connection_info
+  database_name node["bricks"]["db"]["name"]
+  sql { ::File.open(node["bricks"]["path"] + "/config/bricks.sql").read }
+  action :query
+end
