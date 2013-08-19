@@ -16,6 +16,7 @@ Requirements
 - `database` - https://github.com/opscode-cookbooks/database.git
 
 #### Supported versions - codename
+- 1.7 - Phalgu
 - 1.6 - Raidak
 - 1.5 - Lachen
 - 1.4 - Punpun

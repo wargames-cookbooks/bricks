@@ -33,6 +33,8 @@ end
 
 # Bricks Install
 case node["bricks"]["codename"]
+when "phalgu"
+  dl_url = "http://sourceforge.net/projects/owaspbricks/files/Phalgu%20-%201.7/OWASP%20Bricks%20-%20Phalgu.zip"
 when "raidak"
   dl_url = "http://downloads.sourceforge.net/project/owaspbricks/Raidak%20-%201.6/OWASP%20Bricks%20-%20Raidak.zip"
 when "lachen"

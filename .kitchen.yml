@@ -14,6 +14,21 @@ platforms:
     box_url: https://opscode-vm.s3.amazonaws.com/vagrant/opscode_ubuntu-12.04_provisionerless.box
 
 suites:
+- name: "phalgu"
+  run_list:
+  - recipe[bricks]
+  - recipe[minitest-handler]
+  - recipe[bricks_test]
+  attributes: {
+    mysql: {
+      server_root_password: bricks,
+      server_debian_password: bricks,
+      server_repl_password: = bricks
+    },
+    bricks: {
+      codename: "phalgu"
+    }
+  }
 - name: "raidak"
   run_list:
   - recipe[bricks]

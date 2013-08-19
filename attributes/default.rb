@@ -19,7 +19,7 @@ default["bricks"]["db"]["username"] = "bricks"
 default["bricks"]["db"]["password"] = "bricks"
 
 # Bricks application
-default["bricks"]["codename"] = "raidak"
+default["bricks"]["codename"] = "phalgu"
 default["bricks"]["path"]     = "/opt/bricks"
 
 # Apache2 configuration
