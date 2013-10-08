@@ -16,6 +16,8 @@ Requirements
 - `database` - https://github.com/opscode-cookbooks/database.git
 
 #### Supported versions - codename
+- 1.9 - Barak
+- 1.8 - Atrai
 - 1.7 - Phalgu
 - 1.6 - Raidak
 - 1.5 - Lachen
@@ -57,7 +59,7 @@ Just include `bricks` in your node's `run_list`:
 - First, install dependencies:  
 `bundle install`  
 
-- Install cookbook dependencies
+- Install cookbook dependencies:  
 `berks install`
 
 - Run strainer tests:  

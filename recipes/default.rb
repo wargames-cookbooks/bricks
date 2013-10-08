@@ -33,6 +33,10 @@ end
 
 # Bricks Install
 case node["bricks"]["codename"]
+when "barak"
+  dl_url = "http://downloads.sourceforge.net/project/owaspbricks/Barak%20-%201.9/OWASP%20Bricks%20-%20Barak.zip"
+when "atrai"
+  dl_url = "http://downloads.sourceforge.net/project/owaspbricks/Atrai%20-%201.8/OWASP%20Bricks%20-%20Atrai.zip"
 when "phalgu"
   dl_url = "http://sourceforge.net/projects/owaspbricks/files/Phalgu%20-%201.7/OWASP%20Bricks%20-%20Phalgu.zip"
 when "raidak"
@@ -50,7 +54,7 @@ when "betwa"
 when "narmada"
   dl_url = "http://downloads.sourceforge.net/project/owaspbricks/Narmada%20-%201.0/OWASP%20Bricks%20-%20Narmada.zip"
 else
-  raise ArgumentError, "Bricks's codename must be `raidak`, `lachen`, `punpun`, `torsa`, `feni`, `betwa` or `narmada`."
+  raise ArgumentError, "Invalid bricks codename: " + node["bricks"]["codename"]
 end
 
 localfile = Chef::Config[:file_cache_path] + "/bricks.zip"

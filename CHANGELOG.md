@@ -10,3 +10,7 @@ This file is used to list changes made in each version of bricks cookbook.
 
 * Added Phalgu codename support.
 * Added a bit of readme.
+
+## 0.1.2:
+
+* Added Atrai and Barak codename support.
