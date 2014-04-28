@@ -14,3 +14,7 @@ This file is used to list changes made in each version of bricks cookbook.
 ## 0.1.2:
 
 * Added Atrai and Barak codename support.
+
+## 0.1.3:
+
+* Integration testing with serverspec and test-kitchen
