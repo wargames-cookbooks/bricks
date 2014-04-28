@@ -16,7 +16,7 @@ platforms:
 suites:
 - name: "barak"
   run_list:
-  - recipe[bricks]
+    - recipe[bricks]
   attributes: {
     mysql: {
       server_root_password: bricks,
@@ -29,7 +29,7 @@ suites:
   }
 - name: "atrai"
   run_list:
-  - recipe[bricks]
+    - recipe[bricks]
   attributes: {
     mysql: {
       server_root_password: bricks,
@@ -42,7 +42,7 @@ suites:
   }
 - name: "phalgu"
   run_list:
-  - recipe[bricks]
+    - recipe[bricks]
   attributes: {
     mysql: {
       server_root_password: bricks,
@@ -55,7 +55,7 @@ suites:
   }
 - name: "raidak"
   run_list:
-  - recipe[bricks]
+    - recipe[bricks]
   attributes: {
     mysql: {
       server_root_password: bricks,
@@ -68,7 +68,7 @@ suites:
   }
 - name: "lachen"
   run_list:
-  - recipe[bricks]
+    - recipe[bricks]
   attributes: {
     mysql: {
       server_root_password: bricks,
@@ -81,7 +81,7 @@ suites:
   }
 - name: "punpun"
   run_list:
-  - recipe[bricks]
+    - recipe[bricks]
   attributes: {
     mysql: {
       server_root_password: bricks,
@@ -94,7 +94,7 @@ suites:
   }
 - name: "torsa"
   run_list:
-  - recipe[bricks]
+    - recipe[bricks]
   attributes: {
     mysql: {
       server_root_password: bricks,
@@ -107,7 +107,7 @@ suites:
   }
 - name: "feni"
   run_list:
-  - recipe[bricks]
+    - recipe[bricks]
   attributes: {
     mysql: {
       server_root_password: bricks,
@@ -120,7 +120,7 @@ suites:
   }
 - name: "betwa"
   run_list:
-  - recipe[bricks]
+    - recipe[bricks]
   attributes: {
     mysql: {
       server_root_password: bricks,
@@ -133,7 +133,7 @@ suites:
   }
 - name: "narmada"
   run_list:
-  - recipe[bricks]
+    - recipe[bricks]
   attributes: {
     mysql: {
       server_root_password: bricks,
