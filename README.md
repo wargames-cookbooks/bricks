@@ -1,6 +1,7 @@
 OWASP Bricks Cookbook
 =============
-Deploy a bricks environment. [![Build Status](https://secure.travis-ci.org/wargames-cookbooks/bricks.png)](http://travis-ci.org/wargames-cookbooks/bricks)
+Deploy a bricks environment.
+[![Cookbook Version](https://img.shields.io/cookbook/v/bricks.svg)](https://community.opscode.com/cookbooks/bricks) [![Build Status](https://secure.travis-ci.org/wargames-cookbooks/bricks.png)](http://travis-ci.org/wargames-cookbooks/bricks)
 
 Requirements
 ------------
