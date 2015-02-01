@@ -1,4 +1,4 @@
-# encoding: utf-8
+# -*- coding: utf-8 -*-
 #
 # Cookbook Name:: bricks
 # Attributes:: default
@@ -17,14 +17,14 @@
 #
 
 # Database configuration
-default["bricks"]["db"]["name"]     = "bricks"
-default["bricks"]["db"]["username"] = "bricks"
-default["bricks"]["db"]["password"] = "bricks"
+default['bricks']['db']['name'] = 'bricks'
+default['bricks']['db']['username'] = 'bricks'
+default['bricks']['db']['password'] = 'bricks'
 
 # Bricks application
-default["bricks"]["codename"] = "barak"
-default["bricks"]["path"]     = "/opt/bricks"
+default['bricks']['codename'] = 'barak'
+default['bricks']['path'] = '/opt/bricks'
 
 # Apache2 configuration
-default["bricks"]["server_name"]    = "bricks"
-default["bricks"]["server_aliases"] = [ "bricks" ]
+default['bricks']['server_name'] = 'bricks'
+default['bricks']['server_aliases'] = ['bricks']
