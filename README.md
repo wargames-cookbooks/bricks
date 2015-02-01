@@ -58,13 +58,13 @@ Just include `bricks` in your node's `run_list`:
 #### Running tests
 
 - First, install dependencies:  
-`bundle install`  
+`bundle install`
 
-- Install cookbook dependencies:  
-`berks install`
+- Run Checkstyle and ChefSpec:  
+`bundle exec rake`
 
-- Run strainer tests:  
-`bundle exec strainer test`  
+- Run Kitchen tests:  
+`bundle exec rake kitchen`  
 
 Contributing
 ------------
