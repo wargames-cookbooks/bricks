@@ -1,4 +1,7 @@
-.kitchen
-.kitchen.local.yml
+/.kitchen
+/.kitchen.key
+/.kitchen.local.yml
+/.vagrant
+/cookbooks
 /Berksfile.lock
 /Gemfile.lock
