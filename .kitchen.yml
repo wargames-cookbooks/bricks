@@ -4,143 +4,27 @@ driver_config:
   require_chef_omnibus: true
 
 platforms:
-- name: ubuntu-10.04
-  driver_config:
-    box: opscode-ubuntu-10.04
-    box_url: https://opscode-vm.s3.amazonaws.com/vagrant/opscode_ubuntu-10.04_provisionerless.box
 - name: ubuntu-12.04
-  driver_config:
-    box: opscode-ubuntu-12.04
-    box_url: https://opscode-vm.s3.amazonaws.com/vagrant/opscode_ubuntu-12.04_provisionerless.box
+  run_list:
+  - recipe[apt]
 
 suites:
-- name: "barak"
+- name: barak
+  run_list:
+  - recipe[bricks]
+  attributes:
+    bricks:
+      codename: barak
+- name: atrai
+  run_list:
+  - recipe[bricks]
+  attributes:
+    bricks:
+      codename: atrai
+
+- name: phalgu
   run_list:
     - recipe[bricks]
-  attributes: {
-    mysql: {
-      server_root_password: bricks,
-      server_debian_password: bricks,
-      server_repl_password: = bricks
-    },
-    bricks: {
-      codename: "barak"
-    }
-  }
-- name: "atrai"
-  run_list:
-    - recipe[bricks]
-  attributes: {
-    mysql: {
-      server_root_password: bricks,
-      server_debian_password: bricks,
-      server_repl_password: = bricks
-    },
-    bricks: {
-      codename: "atrai"
-    }
-  }
-- name: "phalgu"
-  run_list:
-    - recipe[bricks]
-  attributes: {
-    mysql: {
-      server_root_password: bricks,
-      server_debian_password: bricks,
-      server_repl_password: = bricks
-    },
-    bricks: {
-      codename: "phalgu"
-    }
-  }
-- name: "raidak"
-  run_list:
-    - recipe[bricks]
-  attributes: {
-    mysql: {
-      server_root_password: bricks,
-      server_debian_password: bricks,
-      server_repl_password: = bricks
-    },
-    bricks: {
-      codename: "raidak"
-    }
-  }
-- name: "lachen"
-  run_list:
-    - recipe[bricks]
-  attributes: {
-    mysql: {
-      server_root_password: bricks,
-      server_debian_password: bricks,
-      server_repl_password: = bricks
-    },
-    bricks: {
-      codename: "lachen"
-    }
-  }
-- name: "punpun"
-  run_list:
-    - recipe[bricks]
-  attributes: {
-    mysql: {
-      server_root_password: bricks,
-      server_debian_password: bricks,
-      server_repl_password: = bricks
-    },
-    bricks: {
-      codename: "punpun"
-    }
-  }
-- name: "torsa"
-  run_list:
-    - recipe[bricks]
-  attributes: {
-    mysql: {
-      server_root_password: bricks,
-      server_debian_password: bricks,
-      server_repl_password: = bricks
-    },
-    bricks: {
-      codename: "torsa"
-    }
-  }
-- name: "feni"
-  run_list:
-    - recipe[bricks]
-  attributes: {
-    mysql: {
-      server_root_password: bricks,
-      server_debian_password: bricks,
-      server_repl_password: = bricks
-    },
-    bricks: {
-      codename: "feni"
-    }
-  }
-- name: "betwa"
-  run_list:
-    - recipe[bricks]
-  attributes: {
-    mysql: {
-      server_root_password: bricks,
-      server_debian_password: bricks,
-      server_repl_password: = bricks
-    },
-    bricks: {
-      codename: "betwa"
-    }
-  }
-- name: "narmada"
-  run_list:
-    - recipe[bricks]
-  attributes: {
-    mysql: {
-      server_root_password: bricks,
-      server_debian_password: bricks,
-      server_repl_password: = bricks
-    },
-    bricks: {
-      codename: "narmada"
-    }
-  }
+  attributes:
+    bricks:
+      codename: phalgu

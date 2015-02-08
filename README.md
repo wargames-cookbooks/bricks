@@ -7,7 +7,6 @@ Requirements
 ------------
 
 #### Platform
-- `Ubuntu 10.04`
 - `Ubuntu 12.04`
 
 #### Cookbooks
@@ -20,13 +19,6 @@ Requirements
 - 1.9 - Barak
 - 1.8 - Atrai
 - 1.7 - Phalgu
-- 1.6 - Raidak
-- 1.5 - Lachen
-- 1.4 - Punpun
-- 1.3 - Torsa
-- 1.2 - Feni
-- 1.1 - Betwa
-- 1.0 - Narmada
 
 
 Attributes
@@ -37,6 +29,7 @@ Attributes
 * `['bricks']['db']['password']` - Bricks user password
 * `['bricks']['codename']` - Bricks codename to deploy
 * `['bricks']['path']` - Path where application will be deployed
+* `['bricks']['showhint']` - Show bricks hint, default: false
 * `['bricks']['server_name']` - Apache2 server name
 * `['bricks']['server_aliases']` - Array of apache2 virtualhost aliases
 

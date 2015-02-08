@@ -23,7 +23,7 @@ describe file '/etc/apache2/sites-enabled/bricks.conf' do
   it { should be_file }
   it { should be_owned_by 'root' }
   it { should be_grouped_into 'root' }
-  it { should be_linked_to '/etc/apache2/sites-available/bricks.conf' }
+  it { should be_linked_to '../sites-available/bricks.conf' }
 end
 
 describe file '/opt/bricks' do
@@ -31,4 +31,8 @@ describe file '/opt/bricks' do
   it { should be_owned_by 'root' }
   it { should be_grouped_into 'root' }
   it { should be_mode 755 }
+end
+
+describe command 'wget -O - http://127.0.0.1' do
+  its(:stdout) { should match(/Welcome to OWASP Bricks/) }
 end

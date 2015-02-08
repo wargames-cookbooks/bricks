@@ -22,8 +22,9 @@ default['bricks']['db']['username'] = 'bricks'
 default['bricks']['db']['password'] = 'bricks'
 
 # Bricks application
-default['bricks']['codename'] = 'barak'
+default['bricks']['codename'] = :barak
 default['bricks']['path'] = '/opt/bricks'
+default['bricks']['showhint'] = false
 
 # Apache2 configuration
 default['bricks']['server_name'] = 'bricks'
