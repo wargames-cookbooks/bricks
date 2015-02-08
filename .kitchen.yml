@@ -9,6 +9,24 @@ platforms:
   - recipe[apt]
 
 suites:
+- name: tuivai
+  run_list:
+    - recipe[bricks]
+  attributes:
+    bricks:
+      codename: tuivai
+- name: mora
+  run_list:
+    - recipe[bricks]
+  attributes:
+    bricks:
+      codename: mora
+- name: dakatua
+  run_list:
+    - recipe[bricks]
+  attributes:
+    bricks:
+      codename: dakatua
 - name: barak
   run_list:
   - recipe[bricks]
@@ -21,7 +39,6 @@ suites:
   attributes:
     bricks:
       codename: atrai
-
 - name: phalgu
   run_list:
     - recipe[bricks]

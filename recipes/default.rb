@@ -17,6 +17,9 @@
 #
 
 codename_map = {
+  tuivai: 'http://downloads.sourceforge.net/project/owaspbricks/Tuivai%20-%202.2/OWASP%20Bricks%20-%20Tuivai.zip',
+  mora: 'http://downloads.sourceforge.net/project/owaspbricks/Mora%20-%202.1/OWASP%20Bricks%20-%20Mora.zip',
+  dakatua: 'http://downloads.sourceforge.net/project/owaspbricks/Dakatua%20-%202.0/OWASP%20Bricks%20-%20Dakatua.zip',
   barak: 'http://downloads.sourceforge.net/project/owaspbricks/Barak%20-%201.9/OWASP%20Bricks%20-%20Barak.zip',
   atrai: 'http://downloads.sourceforge.net/project/owaspbricks/Atrai%20-%201.8/OWASP%20Bricks%20-%20Atrai.zip',
   phalgu: 'http://downloads.sourceforge.net/project/owaspbricks/Phalgu%20-%201.7/OWASP%20Bricks%20-%20Phalgu.zip'
