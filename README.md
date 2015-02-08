@@ -16,6 +16,9 @@ Requirements
 - `database` - https://github.com/opscode-cookbooks/database.git
 
 #### Supported versions - codename
+- 2.2 - Tuivai
+- 2.1 - Mora
+- 2.0 - Dakatua
 - 1.9 - Barak
 - 1.8 - Atrai
 - 1.7 - Phalgu
