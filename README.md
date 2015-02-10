@@ -27,14 +27,62 @@ Requirements
 Attributes
 ----------
 #### bricks::default
-* `['bricks']['db']['name']` - Bricks database name
-* `['bricks']['db']['username']` - Bricks username
-* `['bricks']['db']['password']` - Bricks user password
-* `['bricks']['codename']` - Bricks codename to deploy
-* `['bricks']['path']` - Path where application will be deployed
-* `['bricks']['showhint']` - Show bricks hint, default: false
-* `['bricks']['server_name']` - Apache2 server name
-* `['bricks']['server_aliases']` - Array of apache2 virtualhost aliases
+<table>
+<tr>
+<th>Key</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+<tr>
+<td><tt>['bricks']['db']['name']</tt></td>
+<td>String</td>
+<td>Database name</td>
+<td><tt>bricks</tt></td>
+</tr>
+<tr>
+<td><tt>['bricks']['db']['username']</tt></td>
+<td>String</td>
+<td>Database user name</td>
+<td><tt>bricks</tt></td>
+</tr>
+<tr>
+<td><tt>['bricks']['db']['password']</tt></td>
+<td>String</td>
+<td>Database user password</td>
+<td><tt>bricks</tt></td>
+</tr>
+<tr>
+<td><tt>['bricks']['codename']</tt></td>
+<td>String|Symbol</td>
+<td>Bricks codename to deploy</td>
+<td><tt>:barak</tt></td>
+</tr>
+<tr>
+<td><tt>['bricks']['path']</tt></td>
+<td>String</td>
+<td>Path where application will be deployed</td>
+<td><tt>/opt/bricks</tt></td>
+</tr>
+<tr>
+<td><tt>['bricks']['showhint']</tt></td>
+<td>Boolean</td>
+<td>Show bricks hint</td>
+<td><tt>false</tt></td>
+</tr>
+<tr>
+<td><tt>['bricks']['server_name']</tt></td>
+<td>String</td>
+<td>Apache2 server name</td>
+<td><tt>bricks</tt></td>
+</tr>
+<tr>
+<td><tt>['bricks']['server_aliases']</tt></td>
+<td>Array</td>
+<td>Array of apache2 virtualhost aliases</td>
+<td><tt>[bricks]</tt></td>
+</tr>
+</table>
 
 Usage
 -----
