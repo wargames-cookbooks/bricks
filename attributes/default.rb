@@ -22,7 +22,7 @@ default['bricks']['db']['username'] = 'bricks'
 default['bricks']['db']['password'] = 'bricks'
 
 # Bricks application
-default['bricks']['codename'] = :barak
+default['bricks']['codename'] = :tuivai
 default['bricks']['path'] = '/opt/bricks'
 default['bricks']['showhint'] = false
 

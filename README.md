@@ -56,7 +56,7 @@ Attributes
 <td><tt>['bricks']['codename']</tt></td>
 <td>String|Symbol</td>
 <td>Bricks codename to deploy</td>
-<td><tt>:barak</tt></td>
+<td><tt>:tuivai</tt></td>
 </tr>
 <tr>
 <td><tt>['bricks']['path']</tt></td>
