@@ -113,9 +113,11 @@ mysql_database_user node['bricks']['db']['username'] do
   action :grant
 end
 
-mysql_database 'populate-bricks-db' do
-  connection connection_info
-  database_name node['bricks']['db']['name']
-  sql { ::File.open("#{node['bricks']['path']}/config/bricks.sql").read }
-  action :query
+execute 'import-mysql-dump' do
+  command "mysql -h #{connection_info[:host]} "\
+          "-u #{connection_info[:username]} "\
+          "-p#{connection_info[:password]} "\
+          '--socket /run/mysql-default/mysqld.sock '\
+          "#{node['bricks']['db']['name']} "\
+          "< #{node['bricks']['path']}/config/bricks.sql"
 end

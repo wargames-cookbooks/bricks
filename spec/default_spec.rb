@@ -120,12 +120,10 @@ describe 'bricks::default' do
                           socket: '/run/mysql-default/mysqld.sock' })
   end
 
-  it 'should init bricks database with sql queries' do
-    expect(subject).to query_mysql_database('populate-bricks-db')
-      .with(database_name: 'bricksdb',
-            connection: { host: '127.0.0.1',
-                          username: 'root',
-                          password: 'toor',
-                          socket: '/run/mysql-default/mysqld.sock' })
+  it 'should populate bricks database with mysql dump' do
+    expect(subject).to run_execute('import-mysql-dump')
+      .with(command: 'mysql -h 127.0.0.1 -u root -ptoor '\
+                     '--socket /run/mysql-default/mysqld.sock '\
+                     'bricksdb < /opt/bricks-app/config/bricks.sql')
   end
 end
