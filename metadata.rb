@@ -29,3 +29,4 @@ depends 'php'
 depends 'database'
 
 supports 'ubuntu'
+supports 'debian'

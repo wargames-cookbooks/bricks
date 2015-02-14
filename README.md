@@ -8,12 +8,13 @@ Requirements
 
 #### Platform
 - `Ubuntu 12.04`
+- `Debian 7.6`
 
 #### Cookbooks
-- `apache2` - https://github.com/opscode-cookbooks/apache2.git
-- `mysql` - https://github.com/opscode-cookbooks/mysql.git
-- `php` - https://github.com/opscode-cookbooks/php.git
-- `database` - https://github.com/opscode-cookbooks/database.git
+- `apache2` - https://supermarket.chef.io/cookbooks/apache2
+- `mysql` - https://supermarket.chef.io/cookbooks/mysql
+- `php` - https://supermarket.chef.io/cookbooks/php
+- `database` - https://supermarket.chef.io/cookbooks/database
 
 #### Supported versions - codename
 - 2.2 - Tuivai
