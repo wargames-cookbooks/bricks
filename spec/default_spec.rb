@@ -76,12 +76,8 @@ describe 'bricks::default' do
     end
   end
 
-  it 'should install libmysqlclient-dev package' do
-    expect(subject).to install_package('libmysqlclient-dev')
-  end
-
   it 'should install mysql2 gem package' do
-    expect(subject).to install_gem_package('mysql2')
+    expect(subject).to install_mysql2_chef_gem('default')
   end
 
   it 'should setup mysql service' do

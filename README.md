@@ -13,6 +13,7 @@ Requirements
 #### Cookbooks
 - `apache2` - https://supermarket.chef.io/cookbooks/apache2
 - `mysql` - https://supermarket.chef.io/cookbooks/mysql
+- `mysql2_chef_gem` - https://supermarket.chef.io/cookbooks/mysql2_chef_gem
 - `php` - https://supermarket.chef.io/cookbooks/php
 - `database` - https://supermarket.chef.io/cookbooks/database
 

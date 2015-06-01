@@ -25,6 +25,7 @@ recipe 'default', 'Installs/configures bricks webapp + db'
 
 depends 'apache2'
 depends 'mysql'
+depends 'mysql2_chef_gem'
 depends 'php'
 depends 'database'
 
