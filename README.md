@@ -7,8 +7,8 @@ Requirements
 ------------
 
 #### Platform
-- `Ubuntu 12.04`
-- `Debian 7.6`
+- `Ubuntu 14.04`
+- `Debian 8.7`
 
 #### Cookbooks
 - `apache2` - https://supermarket.chef.io/cookbooks/apache2
@@ -29,62 +29,16 @@ Requirements
 Attributes
 ----------
 #### bricks::default
-<table>
-<tr>
-<th>Key</th>
-<th>Type</th>
-<th>Description</th>
-<th>Default</th>
-</tr>
-<tr>
-<td><tt>['bricks']['db']['name']</tt></td>
-<td>String</td>
-<td>Database name</td>
-<td><tt>bricks</tt></td>
-</tr>
-<tr>
-<td><tt>['bricks']['db']['username']</tt></td>
-<td>String</td>
-<td>Database user name</td>
-<td><tt>bricks</tt></td>
-</tr>
-<tr>
-<td><tt>['bricks']['db']['password']</tt></td>
-<td>String</td>
-<td>Database user password</td>
-<td><tt>bricks</tt></td>
-</tr>
-<tr>
-<td><tt>['bricks']['codename']</tt></td>
-<td>String|Symbol</td>
-<td>Bricks codename to deploy</td>
-<td><tt>:tuivai</tt></td>
-</tr>
-<tr>
-<td><tt>['bricks']['path']</tt></td>
-<td>String</td>
-<td>Path where application will be deployed</td>
-<td><tt>/opt/bricks</tt></td>
-</tr>
-<tr>
-<td><tt>['bricks']['showhint']</tt></td>
-<td>Boolean</td>
-<td>Show bricks hint</td>
-<td><tt>false</tt></td>
-</tr>
-<tr>
-<td><tt>['bricks']['server_name']</tt></td>
-<td>String</td>
-<td>Apache2 server name</td>
-<td><tt>bricks</tt></td>
-</tr>
-<tr>
-<td><tt>['bricks']['server_aliases']</tt></td>
-<td>Array</td>
-<td>Array of apache2 virtualhost aliases</td>
-<td><tt>[bricks]</tt></td>
-</tr>
-</table>
+| Key                               | Type   |  Description                                             |
+| ------------------------ | ------- | ---------------------------------------------------------------- |
+| `[bricks][db][name]`     | String  | Database name (default: `bricks`)                                |
+| `[bricks][db][username]` | String  | Database user name (default: `bricks`)                           |
+| `[bricks][db][password]` | String  | Database user password (default: `bricks`)                       |
+| `[bricks][codename]`     | String  | Bricks codename to deploy (default: `:tuivai`)                   |
+| `[bricks][path]`         | String  | Path where application will be deployed (default: `/opt/bricks`) |
+| `[bricks][showhint]`     | Boolean | DVWA default security level (default: `false`)                   |
+| `[bricks][server_name]`  | String  | Apache2 server name (default: `bricks`)                          |
+| `[bricks][server_name]`  | Array   | Array of apache2 virtualhost aliases (default: `[bricks]`)       |
 
 Usage
 -----

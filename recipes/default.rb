@@ -84,7 +84,10 @@ connection_info = {
   socket: '/run/mysql-default/mysqld.sock',
 }
 
-mysql2_chef_gem 'default'
+mysql2_chef_gem 'default' do
+  package_version '5.5'
+end
+
 mysql_service 'default' do
   port '3306'
   version '5.5'
