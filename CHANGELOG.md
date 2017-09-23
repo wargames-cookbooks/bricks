@@ -2,6 +2,13 @@
 
 This file is used to list changes made in each version of bricks cookbook.
 
+## 0.3.0:
+
+* Chef 13 compatibility
+* Updated supported platforms:
+  - Ubuntu 14.04
+  - Debian 8.7
+
 ## 0.2.1:
 
 * Install mysql2 gem package with `mysql2_chef_gem` cookbook
