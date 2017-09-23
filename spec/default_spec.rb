@@ -14,14 +14,17 @@ describe 'bricks::default' do
   end
 
   let(:subject) do
-    ChefSpec::SoloRunner.new(file_cache_path: '/var/chef/cache') do |node|
-      node.set['bricks']['codename'] = :phalgu
-      node.set['bricks']['server_name'] = 'bricks-server'
-      node.set['bricks']['showhint'] = true
-      node.set['bricks']['path'] = '/opt/bricks-app'
-      node.set['bricks']['db']['username'] = 'bricksuser'
-      node.set['bricks']['db']['password'] = 'brickspass'
-      node.set['bricks']['db']['name'] = 'bricksdb'
+    ChefSpec::SoloRunner.new(file_cache_path: '/var/chef/cache',
+                             platform: 'debian',
+                             version: '9.0') do |node|
+      node.override['apache']['mpm'] = 'prefork'
+      node.override['bricks']['codename'] = :phalgu
+      node.override['bricks']['server_name'] = 'bricks-server'
+      node.override['bricks']['showhint'] = true
+      node.override['bricks']['path'] = '/opt/bricks-app'
+      node.override['bricks']['db']['username'] = 'bricksuser'
+      node.override['bricks']['db']['password'] = 'brickspass'
+      node.override['bricks']['db']['name'] = 'bricksdb'
     end.converge(described_recipe)
   end
 
@@ -31,7 +34,7 @@ describe 'bricks::default' do
 
   it 'should include required recipes for webapp' do
     expect(subject).to include_recipe('apache2')
-    expect(subject).to include_recipe('apache2::mod_php5')
+    expect(subject).to include_recipe('apache2::mod_php')
     expect(subject).to include_recipe('php')
     expect(subject).to include_recipe('php::module_mysql')
   end

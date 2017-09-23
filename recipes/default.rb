@@ -22,17 +22,17 @@ codename_map = {
   dakatua: 'http://downloads.sourceforge.net/project/owaspbricks/Dakatua%20-%202.0/OWASP%20Bricks%20-%20Dakatua.zip',
   barak: 'http://downloads.sourceforge.net/project/owaspbricks/Barak%20-%201.9/OWASP%20Bricks%20-%20Barak.zip',
   atrai: 'http://downloads.sourceforge.net/project/owaspbricks/Atrai%20-%201.8/OWASP%20Bricks%20-%20Atrai.zip',
-  phalgu: 'http://downloads.sourceforge.net/project/owaspbricks/Phalgu%20-%201.7/OWASP%20Bricks%20-%20Phalgu.zip'
+  phalgu: 'http://downloads.sourceforge.net/project/owaspbricks/Phalgu%20-%201.7/OWASP%20Bricks%20-%20Phalgu.zip',
 }
 
 unless codename_map.key?(node['bricks']['codename'].to_sym)
-  fail ArgumentError, "Invalid bricks codename: #{node['bricks']['codename']}"
+  raise ArgumentError, "Invalid bricks codename: #{node['bricks']['codename']}"
 end
 
 package 'unzip'
 
 include_recipe 'apache2'
-include_recipe 'apache2::mod_php5'
+include_recipe 'apache2::mod_php'
 include_recipe 'php'
 include_recipe 'php::module_mysql'
 
@@ -81,7 +81,7 @@ connection_info = {
   host: '127.0.0.1',
   username: 'root',
   password: 'toor',
-  socket: '/run/mysql-default/mysqld.sock'
+  socket: '/run/mysql-default/mysqld.sock',
 }
 
 mysql2_chef_gem 'default'
